@@ -3,7 +3,7 @@ package com.qa.java.abstraction;
 public class Motorcycle extends Vehicle {
 
 	private int numOfTires;
-	private String size;
+	public String size;
 
 	public Motorcycle(String madeIn, int model, int numOfTires, String size) {
 		super(madeIn, model);

@@ -2,7 +2,7 @@ package com.qa.java.abstraction;
 
 public class Bus extends Vehicle {
 	private int numOfTires;
-	private String size;
+	public String size;
 
 	public Bus(String madeIn, int model, int numOfTires, String size) {
 		super(madeIn, model);
