@@ -1,7 +1,7 @@
 package com.qa.java.abstraction;
 
 
-public class Main {
+public class XLauncher {
 
   public static void main (String[] args) {
     Vehicle prototype = new Motorcycle("Colombia", 1994,4,"big");
@@ -9,6 +9,11 @@ public class Main {
     prototype.sizeOfVehicle();		
     prototype.setMadeIn("Raleigh,North Carolina");
     System.out.println(prototype.getMadeIn());
+  
+    Garage.parking(prototype);
+    
+  
+  
   }
 }
 

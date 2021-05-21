@@ -11,6 +11,8 @@ public class Motorcycle extends Vehicle {
 		this.size = size;
 	}
 
+	// (Constructor chaining) If NO numOfTires and size is provided, this
+    // constructor provides values by default.
 	public Motorcycle(String madeIn, int model) {
 		this(madeIn, model, 2, "small");
 

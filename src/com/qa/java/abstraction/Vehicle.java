@@ -30,13 +30,4 @@ public abstract class Vehicle {
 		this.model = model;
 	}
 
-
-
-
-
-
-
-
-
-
 }

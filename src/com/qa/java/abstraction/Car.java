@@ -10,7 +10,7 @@ package com.qa.java.abstraction;
 			this.size = size;
   }
 
-  //(Constructor chaining) If NO numOfTires and size is provided, this constructor provides values by default
+  //(Constructor chaining) If NO numOfTires and size is provided, this constructor provides values by default.
     public Car(String madeIn,int model) {
     this(madeIn,model,4,"medium");
   }
