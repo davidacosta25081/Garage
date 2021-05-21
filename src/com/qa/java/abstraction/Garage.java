@@ -1,48 +1,57 @@
 package com.qa.java.abstraction;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Garage {
     
-	private ArrayList<Vehicle> parked;
+  private List<Vehicle> parked;
 	
-	public static void parking(Vehicle machine){
-      ArrayList<Vehicle> parked = new ArrayList<Vehicle>();	  
-	  parked.add(machine);	  
-    }
+  public Garage(){
+    super();
+	parked = new ArrayList<Vehicle>();	  
+  }
 
-   
+  public void parking(Vehicle vehicle) {
+	 parked.add(vehicle); 
+  }    
 	
-  public ArrayList<Vehicle>getList(){
+  public void printParked() {
+    for(Vehicle vehicle : parked) {
+      System.out.println(vehicle);	
+    }  	   
+  }   
+
+  public List<Vehicle> getList(){
     return parked;	  
   }
 
 
-  public void bill (ArrayList<Vehicle> list) {
-	  for (Vehicle vehicle : list) {
-	    if(vehicle.size.equals("big")) {
-	      System.out.println("Your bill is $100");  	
+  public void bill () {
+	  for (Vehicle vehicle : parked) {
+	    if(vehicle.getSize().equals("big")) {
+	      System.out.println("Your bill is $200");  	
 	    }
-	    else if (vehicle.size.equals("medium")) {
+	    else if (vehicle.getSize().equals("medium")) {
 	      System.out.println("Your bill is $100");	
 	    }
-	    else if (vehicle.size.equals("small")) {
-		  System.out.println("Your bill is $20");
+	    else if (vehicle.getSize().equals("small")) {
+		  System.out.println("Your bill is $50");
 	    }
 	  }
   }
 
-  public void addVehicle(Vehicle vehicle) {
-	  parked.add(vehicle);
-  }
-  
+  /*  
   public void removeVehicle(Vehicle vehicle) {
 	  for(Vehicle machine : parked) {
 	    if (machine == vehicle) { 
 		  parked.remove(machine);
 	    }
 	  }
+  
+ 
+  
   }
-
+*/
 }
     
 

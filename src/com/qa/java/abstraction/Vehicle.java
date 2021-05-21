@@ -4,16 +4,14 @@ public abstract class Vehicle {
 
 	private String madeIn;
 	private int model;
+	public abstract void numberOfTires();
+	public abstract String getSize();
 
 	public Vehicle(String madeIn, int model) {
 		this.madeIn = madeIn;
 		this.model = model;
 	}
 
-	public abstract void numberOfTires();
-	public abstract void sizeOfVehicle();
-	
-	
 	public String getMadeIn() {
 		return madeIn;
 	}

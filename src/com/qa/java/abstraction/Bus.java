@@ -2,7 +2,7 @@ package com.qa.java.abstraction;
 
 public class Bus extends Vehicle {
 	private int numOfTires;
-	public String size;
+	private String size;
 
 	public Bus(String madeIn, int model, int numOfTires, String size) {
 		super(madeIn, model);
@@ -23,9 +23,16 @@ public class Bus extends Vehicle {
 	}
 
 	@Override
-	public void sizeOfVehicle() {
-		System.out.println("This Bus has a " + this.size + " size!");
-
+	public String getSize() {
+	  return this.size;
 	}
+	
+	
+	@Override
+	public String toString() {
+		return "Bus [numOfTires=" + numOfTires + ", size=" + size + "]";
+	}
+
+	
 
 }

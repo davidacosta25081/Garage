@@ -5,11 +5,24 @@ package com.qa.java.abstraction;
 public class XLauncher {
 	
   public static void main (String[] args) {
-    Vehicle prototype = new Motorcycle("Colombia", 1994,2,"small");
+    Garage g = new Garage();  
+	  
+	  
+	  
+	Vehicle prototype = new Motorcycle("Colombia", 1994,2,"small");
     Vehicle prototype2 = new Car("China", 1993,4,"medium");
     Vehicle prototype3 = new Bus("Argentina", 1998,8,"big");
-    Garage test = new Garage();
+    
    
+    g.parking(prototype);
+    g.parking(prototype2);
+    g.parking(prototype3);
+  
+    g.printParked();
+    g.bill();
+    
+    // g.removeVehicle(prototype);
+  
   }
   
     
