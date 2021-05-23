@@ -10,7 +10,7 @@ public class XLauncher {
 	  
 	  
 	Vehicle prototype = new Motorcycle("Colombia", 1994,2,"small");
-    Vehicle prototype2 = new Car("China", 1993,4,"medium");
+    Vehicle prototype2 = new Car("China", 1993);
     Vehicle prototype3 = new Bus("Argentina", 1998,8,"big");
     
    
@@ -21,19 +21,17 @@ public class XLauncher {
     g.printParked();
     g.bill();
     
-    // g.removeVehicle(prototype);
-  
+    g.removeVehicleById(1);
+    g.removeVehicleBySize("small");
+    g.printParked();
   }
-  
-    
-  
   
 }
 
 
 
 /* 
-  Garage part 1
+  Garage :
  
     1) Using Vehicle as a base class, create three derived classes (car, motorcycle etc.), 
        each derived class should have its own attributes in addition to the normal Vehicle attributes. 

@@ -6,7 +6,7 @@ public class Motorcycle extends Vehicle {
 	private String size;
 
 	public Motorcycle(String madeIn, int model, int numOfTires, String size) {
-		super(madeIn, model);
+		super(madeIn, model,size);
 		this.numOfTires = numOfTires;
 		this.size = size;
 	}
@@ -14,7 +14,7 @@ public class Motorcycle extends Vehicle {
 	// (Constructor chaining) If NO numOfTires and size is provided, this
     // constructor provides values by default.
 	public Motorcycle(String madeIn, int model) {
-		this(madeIn, model, 2, "small");
+		this(madeIn, model,2, "small");
 
 	}
 
@@ -24,13 +24,9 @@ public class Motorcycle extends Vehicle {
 
 	}
 
-	@Override
-	public String getSize() {
-	  return this.size;
-	}
 	
 	@Override
 	public String toString() {
-		return "Motorcycle [numOfTires=" + numOfTires + ", size=" + size + "]";
+		return "Motorcycle has " + numOfTires + " tires " + "and its size is " + size + ".";
 	}
 }

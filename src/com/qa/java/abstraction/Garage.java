@@ -11,47 +11,56 @@ public class Garage {
 	parked = new ArrayList<Vehicle>();	  
   }
 
+  // Adds vehicle to garage
   public void parking(Vehicle vehicle) {
 	 parked.add(vehicle); 
   }    
-	
+
+  //Prints vehicles parked and gives a description of each of them.
   public void printParked() {
     for(Vehicle vehicle : parked) {
       System.out.println(vehicle);	
     }  	   
   }   
 
-  public List<Vehicle> getList(){
-    return parked;	  
-  }
-
-
+  // Printing Bills of vehicles and informs its respective id.
   public void bill () {
-	  for (Vehicle vehicle : parked) {
-	    if(vehicle.getSize().equals("big")) {
-	      System.out.println("Your bill is $200");  	
-	    }
-	    else if (vehicle.getSize().equals("medium")) {
-	      System.out.println("Your bill is $100");	
-	    }
-	    else if (vehicle.getSize().equals("small")) {
-		  System.out.println("Your bill is $50");
-	    }
+    for (Vehicle vehicle : parked) {
+	  if(vehicle.getSize().equals("big")) {
+	    System.out.println("The Bill of Vehicle of id " +vehicle.getId() + " is $200.");  	
 	  }
+	  else if (vehicle.getSize().equals("medium")) {
+		  System.out.println("The Bill of Vehicle of id " +vehicle.getId() + " is $100.");	
+	  }
+	  else if (vehicle.getSize().equals("small")) {
+		  System.out.println("The Bill of Vehicle of id " +vehicle.getId() + " is $50.");
+	  }
+	}
   }
 
-  /*  
-  public void removeVehicle(Vehicle vehicle) {
-	  for(Vehicle machine : parked) {
-	    if (machine == vehicle) { 
-		  parked.remove(machine);
-	    }
+  //Removes vehicle by ID 
+  public void removeVehicleById(int id) {
+    for(int i = 0; i < parked.size(); i++) {
+	  if (parked.get(i).getId() == id) { 
+	    parked.remove(parked.get(id));
+	    System.out.println("Vehicle of id " + id + " removed.");
 	  }
-  
- 
-  
+	 }
   }
-*/
+
+//Removes vehicle by size
+  public void removeVehicleBySize(String size) {
+	    for(int i = 0; i < parked.size(); i++) {
+		  if (parked.get(i).getSize() == size) { 
+		    parked.remove(parked.get(i));
+		    System.out.println("Vehicle of size " + size + " removed.");
+		  }
+		 }
+	  }
+
+
+
+
 }
     
 

@@ -4,15 +4,15 @@ package com.qa.java.abstraction;
 	  private int numOfTires;
 	  private String size;
   
-  public Car(String madeIn, int model, int numOfTires, String size) {
-			super(madeIn, model);
+  public Car(String madeIn, int model,int numOfTires, String size) {
+			super(madeIn, model,size);
 			this.numOfTires = numOfTires;
 			this.size = size;
   }
 
   //(Constructor chaining) If NO numOfTires and size is provided, this constructor provides values by default.
     public Car(String madeIn,int model) {
-    this(madeIn,model,4,"medium");
+    this(madeIn,model,4, "medium");
   }
 
 	@Override
@@ -30,7 +30,7 @@ package com.qa.java.abstraction;
 
 	@Override
 	public String toString() {
-		return "Car [numOfTires=" + numOfTires + ", size=" + size + "]";
+	  return "Car has " + numOfTires + " tires " + "and its size is " + size + ".";
 	}
 
 }

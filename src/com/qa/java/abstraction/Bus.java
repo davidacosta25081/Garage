@@ -4,16 +4,16 @@ public class Bus extends Vehicle {
 	private int numOfTires;
 	private String size;
 
-	public Bus(String madeIn, int model, int numOfTires, String size) {
-		super(madeIn, model);
+	public Bus(String madeIn, int model,int numOfTires, String size) {
+		super(madeIn, model,size);
 		this.numOfTires = numOfTires;
 		this.size = size;
 	}
 
 	// (Constructor chaining) If NO numOfTires and size is provided, this
 	// constructor provides values by default.
-	public Bus(String madeIn, int model) {
-		this(madeIn, model, 8, "Big");
+	public Bus(String madeIn, int model, int id) {
+		this(madeIn, model,8,"Big");
 	}
 
 	@Override
@@ -30,9 +30,7 @@ public class Bus extends Vehicle {
 	
 	@Override
 	public String toString() {
-		return "Bus [numOfTires=" + numOfTires + ", size=" + size + "]";
+		return "Bus has " + numOfTires + " tires " + "and its size is " + size + ".";
 	}
-
-	
 
 }
