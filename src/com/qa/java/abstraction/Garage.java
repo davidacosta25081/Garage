@@ -48,7 +48,7 @@ public class Garage {
 	 }
   }
 
-//Removes vehicle by size
+  //Removes vehicle by size
   public void removeVehicleBySize(String size) {
 	    for(int i = 0; i < parked.size(); i++) {
 		  if (parked.get(i).getSize() == size) { 
@@ -58,6 +58,10 @@ public class Garage {
 		 }
 	  }
 
+  //Empty garage. removing all of its elements(cars)
+  public void clearGarage() {
+    parked.clear();	  
+  }
 
 
 
