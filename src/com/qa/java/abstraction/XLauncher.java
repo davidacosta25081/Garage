@@ -12,8 +12,10 @@ public class XLauncher {
 	Vehicle prototype = new Motorcycle("Colombia", 1994,2,"small");
     Vehicle prototype2 = new Car("China", 1993);
     Vehicle prototype3 = new Bus("Argentina", 1998,8,"big");
+    Vehicle prototype4 =  new Car();
+    Vehicle prototype5 =  new Bus();
+    Vehicle prototype6 =  new Motorcycle();
     
-   
     g.parking(prototype);
     g.parking(prototype2);
     g.parking(prototype3);

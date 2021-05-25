@@ -10,12 +10,18 @@ package com.qa.java.abstraction;
 			this.size = size;
   }
 
-  //(Constructor chaining) If NO numOfTires and size is provided, this constructor provides values by default.
+  /* Practicing Constructor chaining... If values for numOfTires and size are NOT provided, 
+     this constructor invokes main constructor and provides values by default.
+  */
     public Car(String madeIn,int model) {
-    this(madeIn,model,4, "medium");
-  }
+      this(madeIn,model,4, "medium");
+    }
 
-	@Override
+    public Car() {
+      super();	
+    }
+    
+    @Override
 	public void numberOfTires() {
 		System.out.println("This Car has " + this.numOfTires + " tires!");
 		

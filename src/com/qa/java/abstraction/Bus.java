@@ -10,12 +10,17 @@ public class Bus extends Vehicle {
 		this.size = size;
 	}
 
-	// (Constructor chaining) If NO numOfTires and size is provided, this
-	// constructor provides values by default.
+	/* Practicing Constructor chaining... If values for numOfTires and size are NOT provided, 
+       this constructor invokes main constructor and provides values by default.
+    */
 	public Bus(String madeIn, int model, int id) {
 		this(madeIn, model,8,"Big");
 	}
 
+	public Bus() {
+	  super();	
+	}
+	
 	@Override
 	public void numberOfTires() {
 		System.out.println("This Bus has " + this.numOfTires + " tires!");

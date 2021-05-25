@@ -15,9 +15,14 @@ public abstract class Vehicle {
 		this.model = model;
 	    this.size = size;
 		this.id = counter++;
-	    
-	}
+    }
 
+	
+	public Vehicle() {
+	  System.out.println("Vehicle features undefined");
+	}
+	
+	
 	public String getMadeIn() {
 		return madeIn;
 	}
